@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+  --color1: #FFFC31;
+  --color2: #E94F37;
+  --color3: #F4E87C;
+  --color4: #F6F7EB;
+  --color5: #393E41;
+
+}
+
+.App-header {
+  border-bottom: 3px solid #E94F37;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: calc(10px + 1vmin);
+  color: #E94F37;
+}
+
+.App-header p {
+  color: var(--color5);
+}
+
+.App-header a {
+  color: var(--color2);
+}
+
+.cNDN {
+  text-align: right;
+  color: var(--color5);
+  font-size: calc(20px + 1vmin);
+}
+
+/*-----*/
+
+.cvInfo {
+  text-align: left;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.cvInfo form div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.cvInfo form h3 {
+  border-bottom: 1px solid #E94F37;
+  color: #555;
+}
+.cvInfo form input {
+  margin: 3px 0;
+  height: 20px;
+  border: 1px dotted #393E41;
+}
+.cvInfo form button {
+  border: none;
+  background-color: #E94F37;
+  color:#F6F7EB;
+  padding:10px 10px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 1px 2px 5px #393E41;
+  cursor: pointer;
+}
+.cvInfo .des {
+  height:50px;
+}
+
