@@ -95,8 +95,8 @@ export class CVOutput extends React.Component {
             try{
                 skillsInfo.push(
                     <div className="skillsWrapper">
-                        <p className="skillsCom">{skills.Title[i]}</p>
-                        <p className="skillsTitle">{skills.Description[i]}</p>
+                        <p className="skillsTitle">{skills.Title[i]}</p>
+                        <p className="skillsDes">{skills.Description[i]}</p>
                     </div>
                 )
             }catch {
@@ -111,13 +111,23 @@ export class CVOutput extends React.Component {
                     <p className="perTitle">{personal.Title[0]}</p>
                 </div>
                 <div className="cvContact">
+                    <p className="cvSectionHead"></p>
                     {phoneContact}
                     {emailContact}
                 </div>
                 <div className="cvEdu">
+                    <p className="cvSectionHead">Education</p>
                     {eduInfo}
+                </div>
+                <div className="cvJob">
+                    <p className="cvSectionHead">Job Experience</p>
                     {jobInfo}
-                    {skillsInfo}
+                </div>
+                <div className="cvSkills">
+                    <p className="cvSectionHead">Other Skills</p>
+                    <div className="skillsGrid">
+                        {skillsInfo}
+                    </div>
                 </div>
             </div>
         )

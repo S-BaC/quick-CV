@@ -108,13 +108,65 @@
 .perTitle {
   margin-top:0;
   font-size: calc(15px + 1vmin);
-
 }
+
+.cvContact {
+  text-align: right;
+}
+
 .phoneWrapper svg, .emailWrapper svg {
-  width:30px;
+  width:20px;
 }
 
 .phoneWrapper, .emailWrapper {
-  display: flex;
+  display: inline-flex;
+  margin:10px;
   gap:10px;
+  justify-content: flex-end;
+}
+
+.cvSectionHead {
+  font-weight: 500;
+  font-style: italic;  
+  padding: 0px 30px;
+}
+
+.eduWrapper, .jobWrapper {
+  margin: auto;
+  margin-bottom: 5px;
+  padding: 2px 30px;
+  border: 1px dashed var(--color5);
+  text-align: center;
+  width:75%;
+}
+
+.eduIns, .jobCom {
+  font-weight: 500;
+  font-size: calc(15px + 1vmin);
+  color:var(--color2);
+}
+
+.cvSkills {
+  display: flex;
+  flex-direction: column;
+  padding:5px 30px;
+}
+
+.cvSkills .cvSectionHead {
+  padding: 0;
+}
+
+.skillsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.skillsTitle {
+  font-weight: 500;
+  color:var(--color2);
+}
+
+.skillsDes {
+  font-weight: 100;
+
 }

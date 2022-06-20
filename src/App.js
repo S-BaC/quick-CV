@@ -52,8 +52,8 @@ let userData = {
       "Degree": ["B.Comp.Sci"]
   },
   "JobExperience": {
-      "Company": ["MWZ"],
-      "Duration": ["2 years"],
+      "Company": ["MWZ", "Freelancing"],
+      "Duration": ["2 years", "3 years"],
       "Role": ["supervisee"],
       "Description": ["Manages stuff"]
   },
