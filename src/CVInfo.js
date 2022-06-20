@@ -4,21 +4,12 @@ export class CVInfo extends React.Component {
 
     constructor (props) {
         super (props);
-        this.doNothing = this.doNothing.bind(this);
         this.formSubmit = this.formSubmit.bind(this);
-        this.addSection = this.addSection.bind(this);
-    }
-
-    doNothing (e) {
-        e.preventDefault ();
     }
 
     formSubmit (e) {
+        e.preventDefault();
         this.props.formSubmission(e.target);
-    }
-
-    addSection (e) {
-        console.log(e.target);
     }
     
     addEle (ele, count, key, formInputs) {
@@ -56,7 +47,6 @@ export class CVInfo extends React.Component {
                 }
             }
             
-
             /* Features to Explore (1) */
 
         }
@@ -67,9 +57,9 @@ export class CVInfo extends React.Component {
                 <p>
                     Information written here will be rendered on the CV. Any field left blank will be omitted.
                 </p>
-                <form onSubmit={this.doNothing}>
+                <form onSubmit={this.formSubmit}>
                     {formInputs}
-                    <button onClick={this.formSubmit}> Confirm </button>
+                    <button> Confirm </button>
                 </form>
             </div>
         )

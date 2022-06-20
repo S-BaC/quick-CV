@@ -78,11 +78,65 @@ class App extends React.Component {
   constructor (props) {
     super (props);
     this.formSubmission = this.formSubmission.bind(this);
+
+    this.state = {
+      data : userData
+    }
   }
 
-  formSubmission (data) {
-    console.log("received");
-    console.log(data);
+  formSubmission (userInfo) {
+    this.setState({
+      data: {
+        "PersonalInformation": {
+            "Name": [userInfo.elements[0].value],
+            "Title": [userInfo.elements[1].value],
+            "DOB": [userInfo.elements[2].value]
+        },
+        "Contact": {
+            "Phone": 
+              [userInfo.elements[3].value, 
+              userInfo.elements[5].value],
+            "Email": 
+              [userInfo.elements[4].value, 
+              userInfo.elements[6].value]
+        },
+        "Education": {
+            "Institution": [
+              userInfo.elements[7].value,
+              userInfo.elements[10].value],
+            "Duration": [
+              userInfo.elements[8].value,
+              userInfo.elements[11].value],
+            "Degree": [
+              userInfo.elements[9].value,
+              userInfo.elements[12].value]
+        },
+        "JobExperience": {
+            "Company": [
+              userInfo.elements[13].value,
+              userInfo.elements[17].value],
+            "Duration": [
+              userInfo.elements[14].value,
+              userInfo.elements[18].value],
+            "Role": [
+              userInfo.elements[15].value,
+              userInfo.elements[19].value],
+            "Description": [
+              userInfo.elements[16].value,
+              userInfo.elements[20].value]
+        },
+        "Skills": {
+            "Title": [
+              userInfo.elements[21].value,
+              userInfo.elements[23].value,
+              userInfo.elements[24].value],
+            "Description": [
+              userInfo.elements[22].value,
+              userInfo.elements[25].value,
+              userInfo.elements[26].value]
+        }
+      }
+    });
   }
 
   render() {
@@ -90,7 +144,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <CVInfo formData = {formData} formSubmission = {this.formSubmission}/>
-        <CVOutput userData = {userData} />
+        <CVOutput userData = {this.state.data} />
       </div>
     );
   }
