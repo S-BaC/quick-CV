@@ -43,6 +43,7 @@ export class CVInfo extends React.Component {
 
         return (
             <div className="cvInfo">
+                <h1 className="sectionHeader"> Content Now, Design Next</h1>
                 <p>
                     Information written here will be rendered on the CV. Any field left blank will be omitted.
                 </p>

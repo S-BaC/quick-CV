@@ -8,7 +8,6 @@ export class Header extends React.Component {
                     <h3>QUICK CV</h3>
                     <p>a react app by <a href="">SHO</a></p>
                 </header>
-                <h1 className="cNDN"> Content Now, Design Next</h1>
             </div>
         )
     }

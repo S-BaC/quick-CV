@@ -1,11 +1,19 @@
 .App {
   text-align: center;
+  background-color: #F6F7EB;
+  padding: 10px;
   --color1: #FFFC31;
   --color2: #E94F37;
   --color3: #F4E87C;
   --color4: #F6F7EB;
   --color5: #393E41;
 
+}
+
+@media screen and (min-width:1000px) {
+  .App {
+    padding: 20px;
+  }
 }
 
 .App-header {
@@ -25,7 +33,7 @@
   color: var(--color2);
 }
 
-.cNDN {
+.sectionHeader {
   text-align: right;
   color: var(--color5);
   font-size: calc(20px + 1vmin);
@@ -71,3 +79,39 @@
   height:50px;
 }
 
+/*-----*/
+.cvOutput {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #555;
+  background-color: #fff;
+  margin:auto;
+  text-align: left;
+  overflow: hidden;
+}
+
+.cvHead {
+  padding: 5px 20px;
+  background-color: var(--color2);
+  color:var(--color1);
+  text-align: right;
+}
+.perName {
+  font-size: calc(30px + 1vmin);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.perTitle {
+  margin-top:0;
+  font-size: calc(15px + 1vmin);
+
+}
+.phoneWrapper svg, .emailWrapper svg {
+  width:30px;
+}
+
+.phoneWrapper, .emailWrapper {
+  display: flex;
+  gap:10px;
+}
