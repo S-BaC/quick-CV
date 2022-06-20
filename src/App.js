@@ -5,21 +5,36 @@ import { CVInfo } from './CVInfo';
 import { CVOutput } from './CVOutput';
 
 let formData = {
-  "Personal Information": [
-      "Name", "Title", "DOB" 
-  ],
-  "Contact": [
-      "Phone", "Email"
-  ],
-  "Education": [
-      "Institution", "Duration", "Degree"
-  ],
-  "Job Experience": [
-      "Company", "Duration", "Role", "Description"
-  ],
-  "Skills": [
-      "Title", "Description"
-  ]
+  "Personal Information":{
+    "data" : [
+              "Name", "Title", "DOB" 
+            ],
+    "times" : 1
+  },
+  "Contact":{
+    "data" : [
+              "Phone", "Email"
+            ],
+    "times" : 2
+  },
+  "Education":{
+    "data" : [
+              "Institution", "Duration", "Degree"
+            ],
+    "times" : 2
+  },
+  "Job Experience":{
+    "data" : [
+              "Company", "Duration", "Role", "Description"
+            ],
+    "times" : 2
+  },
+  "Skills":{
+    "data" : [
+              "Title", "Description"
+            ],
+    "times" : 3
+  }
 }
 let userData = {
   "PersonalInformation": {
@@ -59,11 +74,22 @@ let userData = {
 // }
 
 class App extends React.Component {
+
+  constructor (props) {
+    super (props);
+    this.formSubmission = this.formSubmission.bind(this);
+  }
+
+  formSubmission (data) {
+    console.log("received");
+    console.log(data);
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <CVInfo formData = {formData} />
+        <CVInfo formData = {formData} formSubmission = {this.formSubmission}/>
         <CVOutput userData = {userData} />
       </div>
     );
